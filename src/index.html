@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Calcular</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+    
+</head>
+<body>
+    <body class="exercicio">
+    <div id="app">
+        <p> Chegue ao número {{sorteio}}</p>
+        
+        <p>
+            <button v-on:click="add">+{{somar}}</button>
+            <button v-on:click="remove">-{{diminuir}}</button>
+            <button v-on:click="mult">X{{multiplicar}}</button>
+            
+        </p>
+        <p>{{contador}} 
+       </p>
+        <p><span v-if="contador === sorteio">Parabéns, você conseguiu!</span></p>
+    </div>
+    <script src="/js/script.js"></script>
+
+</body>
+</html>        
