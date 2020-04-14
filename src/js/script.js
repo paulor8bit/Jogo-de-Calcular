@@ -6,12 +6,12 @@ function getInteiroAleatorio (min, max) {
 
 
 const jogadas = {
-   contador: getInteiroAleatorio(0, 30),
+   contador: getInteiroAleatorio(0, 99),
    mult: getInteiroAleatorio(1, 11),
-   dividir: getInteiroAleatorio(1, 11),
+   dividir: getInteiroAleatorio(2, 10),
    somar: getInteiroAleatorio(1, 10),
    diminuir: getInteiroAleatorio(1, 11),
-   sorteio: getInteiroAleatorio(0, 30),
+   sorteio: getInteiroAleatorio(0, 99),
     }
 
 
@@ -34,9 +34,10 @@ new Vue({
             this.contador -= this.diminuir
         },
         divid() { 
-            if (this.contador < this.dividir) {
-                this.contador    
-            } else { this.contador = Math.floor(this.contador/this.dividir)}
+            if (this.contador < this.dividir && this.contador >= 0) {
+                this.contador   }
+           
+            else { this.contador = Math.floor(this.contador/this.dividir)}
             },
         mult() {
             this.contador *= this.multiplicar
